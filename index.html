@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diniz Express — Entrega com preço fixo, seguro de carga e compromisso</title>
+  <meta name="description" content="Serviço de entrega legalizado pela Prefeitura de SP. Motoboy e utilitários com preço fixo, seguro de carga incluso. Atendemos São Paulo e região das 08h às 21h, todos os dias." />
+  <meta property="og:title" content="Diniz Express — Entrega que chega" />
+  <meta property="og:description" content="Motoboy e utilitários com preço fixo, seguro de carga e compromisso de verdade. Vila Formosa, Zona Leste de SP." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/png" href="img/favicon.png" />
+  <link rel="apple-touch-icon" href="img/favicon.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- CSS gerado pelo Tailwind CLI -->
+  <link rel="stylesheet" href="css/output.css" />
+</head>
+<body>
+
+  <!-- ── Botão WhatsApp fixo ────────────────────────────────────── -->
+  <a
+    href="https://wa.me/5511987411445"
+    class="sticky-whatsapp"
+    aria-label="Chamar a Diniz Express no WhatsApp"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <!-- ══════════════════════════════════════════════════════════════
+       1. HERO
+  ═══════════════════════════════════════════════════════════════════ -->
+  <section class="hero-surface min-h-screen flex items-center relative overflow-hidden">
+    <!-- Textura de ruído sutil -->
+    <div class="absolute inset-0 opacity-5 noise-texture" aria-hidden="true"></div>
+
+    <div class="container-main w-full pt-10 pb-24 relative z-10">
+      <div class="hero-logo-frame reveal hero-reveal" aria-label="Diniz Express">
+        <img
+          src="img/logo-horizontal.png"
+          alt=""
+          width="884"
+          height="303"
+        />
+      </div>
+
+      <!-- Badge de legalização -->
+      <div class="reveal hero-reveal mb-6">
+        <span class="badge badge-light">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          Legalizado pela Prefeitura de São Paulo
+        </span>
+      </div>
+
+      <!-- Headline principal -->
+      <h1 class="hero-title text-white text-5xl sm:text-6xl lg:text-7xl max-w-2xl mb-6 reveal hero-reveal" data-delay="0.1">
+        Motoboy e utilitários com preço fixo, seguro de carga e compromisso de verdade
+      </h1>
+
+      <!-- Subheadline -->
+      <p class="text-gray-light text-lg sm:text-xl max-w-xl mb-10 reveal hero-reveal text-body-tight" data-delay="0.2">
+        Atendemos São Paulo e região — das 08h às 21h, todos os dias. Sem surpresa no preço. Sem sumiço no meio da rota.
+      </p>
+
+      <!-- CTA -->
+      <div class="reveal hero-reveal" data-delay="0.3">
+        <a href="https://wa.me/5511987411445" class="btn-whatsapp" target="_blank" rel="noopener noreferrer">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          Pedir orçamento no WhatsApp
+        </a>
+      </div>
+
+      <!-- Selos de confiança -->
+      <div class="flex flex-wrap gap-6 mt-12 reveal hero-reveal" data-delay="0.4">
+        <div class="flex items-center gap-2 text-gray-light text-sm hero-meta-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          08h às 21h, todos os dias
+        </div>
+        <div class="flex items-center gap-2 text-gray-light text-sm hero-meta-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Seguro de carga incluso
+        </div>
+        <div class="flex items-center gap-2 text-gray-light text-sm hero-meta-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Vila Formosa, Zona Leste — raio de 30km
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════════
+       2. PROBLEMA
+  ═══════════════════════════════════════════════════════════════════ -->
+  <section class="section-padding bg-off-white-section">
+    <div class="container-narrow">
+      <div class="reveal mb-4">
+        <span class="badge">Reconhece essa situação?</span>
+      </div>
+
+      <h2 class="section-title text-3xl sm:text-4xl lg:text-5xl mb-6 reveal text-heading-dark">
+        Se você já teve um motoboy que sumiu, cobrou diferente do combinado ou entregou no dia seguinte — você sabe o que está em jogo
+      </h2>
+
+      <p class="text-lg mb-10 reveal text-body-muted">
+        Entrega não é só logística. É reputação. É prazo. É o seu cliente do outro lado esperando.
+      </p>
+
+      <p class="font-semibold mb-4 reveal text-body-dark">
+        O problema com a maioria dos serviços de entrega:
+      </p>
+
+      <ul class="mb-10 reveal" role="list">
+        <li class="pain-item">
+          <span class="pain-icon" aria-hidden="true">✕</span>
+          <span class="text-body-dark">Preço que muda conforme o humor do motorista</span>
+        </li>
+        <li class="pain-item">
+          <span class="pain-icon" aria-hidden="true">✕</span>
+          <span class="text-body-dark">Sem seguro — se perder, o prejuízo é seu</span>
+        </li>
+        <li class="pain-item">
+          <span class="pain-icon" aria-hidden="true">✕</span>
+          <span class="text-body-dark">Sem nota, sem registro, sem responsabilidade</span>
+        </li>
+        <li class="pain-item">
+          <span class="pain-icon" aria-hidden="true">✕</span>
+          <span class="text-body-dark">Motorista sem treinamento, sem vínculo, sem comprometimento</span>
+        </li>
+      </ul>
+
+      <p class="text-lg reveal text-body-dark">
+        Quando algo dá errado, você fica no prejuízo e ainda tem que explicar para o seu cliente.
+      </p>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════════
+       3. SOLUÇÃO
+  ═══════════════════════════════════════════════════════════════════ -->
+  <section class="section-padding bg-white-section">
+    <div class="container-main">
+      <div class="text-center mb-4 reveal">
+        <span class="badge">Como funcionamos</span>
+      </div>
+      <h2 class="section-title text-3xl sm:text-4xl lg:text-5xl text-center mb-6 reveal text-heading-dark">
+        A Diniz Express funciona diferente
+      </h2>
+      <p class="text-center text-lg max-w-2xl mx-auto mb-14 reveal text-body-muted">
+        Somos um serviço de entrega legalizado pela Prefeitura de São Paulo, com tabela de preços transparente, seguro de carga incluso e motoristas treinados e comprometidos.
+        <br /><br />
+        Atendemos empresas e pessoas físicas — com a mesma seriedade para uma encomenda ou para um contrato de entregas fixas.
+      </p>
+
+      <!-- Cards de serviço -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 reveal">
+        <!-- Motoboy -->
+        <div class="service-card">
+          <img src="img/illustration-motoboy.png" alt="" class="card-illustration card-illustration-lg" loading="lazy" aria-hidden="true" />
+          <h3 class="card-title text-2xl mb-3 text-heading-dark">Motoboy</h3>
+          <p class="mb-4 text-body-muted">
+            Documentos, e-commerce, farmácias, urgências e encomendas em geral.
+          </p>
+          <p class="text-sm font-medium text-body-blue">
+            Entrega rápida e com seguro incluso
+          </p>
+        </div>
+
+        <!-- Utilitários -->
+        <div class="service-card">
+          <img src="img/illustration-utilitarios.png" alt="" class="card-illustration card-illustration-lg" loading="lazy" aria-hidden="true" />
+          <h3 class="card-title text-2xl mb-3 text-heading-dark">Utilitários</h3>
+          <p class="mb-4 text-body-muted">
+            Fiorino, Van HR/Ducato e Iveco/Master para cargas maiores.
+          </p>
+          <p class="text-sm font-medium text-body-blue">
+            Capacidade para cargas de todos os tamanhos
+          </p>
+        </div>
+      </div>
+
+      <!-- Área e horário -->
+      <div class="flex flex-col sm:flex-row gap-4 sm:gap-8 justify-center items-center mt-10 reveal">
+        <div class="flex items-center gap-2 text-sm detail-meta-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Vila Formosa e região — raio de até 30km em São Paulo
+        </div>
+        <div class="hidden sm:block w-px h-4 detail-divider"></div>
+        <div class="flex items-center gap-2 text-sm detail-meta-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          08h às 21h, todos os dias
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════════
+       4. BENEFÍCIOS
+  ═══════════════════════════════════════════════════════════════════ -->
+  <section class="section-padding bg-navy-section">
+    <div class="container-main">
+      <div class="text-center mb-4 reveal">
+        <span class="badge badge-light">Por que Diniz Express</span>
+      </div>
+      <h2 class="section-title text-white text-3xl sm:text-4xl lg:text-5xl text-center mb-16 reveal">
+        O que você contrata quando contrata a Diniz Express:
+      </h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-10 lg:gap-14">
+        <!-- Preço fixo -->
+        <div class="benefit-item reveal">
+          <div class="benefit-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <div>
+            <h3 class="card-title text-xl text-white mb-2">Preço fixo e transparente</h3>
+            <p class="benefit-copy">
+              Tabela clara antes de fechar. Sem cobrança surpresa no final da corrida.
+            </p>
+          </div>
+        </div>
+
+        <!-- Seguro de carga -->
+        <div class="benefit-item reveal" data-delay="0.1">
+          <div class="benefit-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div>
+            <h3 class="card-title text-xl text-white mb-2">Seguro de carga incluso</h3>
+            <p class="benefit-copy">
+              Carga coberta em todas as entregas. Você não arca com prejuízo por acidente ou extravio.
+            </p>
+          </div>
+        </div>
+
+        <!-- Legalizada -->
+        <div class="benefit-item reveal" data-delay="0.2">
+          <div class="benefit-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+          </div>
+          <div>
+            <h3 class="card-title text-xl text-white mb-2">Empresa legalizada pela Prefeitura</h3>
+            <p class="benefit-copy">
+              Cursos de transporte e autorização municipal. Não é motoboy informal — é serviço regulamentado.
+            </p>
+          </div>
+        </div>
+
+        <!-- Disponibilidade -->
+        <div class="benefit-item reveal" data-delay="0.1">
+          <div class="benefit-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div>
+            <h3 class="card-title text-xl text-white mb-2">Disponibilidade real</h3>
+            <p class="benefit-copy">
+              Das 08h às 21h, sete dias por semana. Para rotina e para urgência.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════════
+       5. PROVA SOCIAL
+  ═══════════════════════════════════════════════════════════════════ -->
+  <section class="section-padding bg-off-white-section">
+    <div class="container-main">
+      <div class="text-center mb-4 reveal">
+        <span class="badge">Quem a Diniz atende</span>
+      </div>
+      <h2 class="section-title text-3xl sm:text-4xl lg:text-5xl text-center mb-4 reveal text-heading-dark">
+        Perfis que contam com a Diniz no dia a dia
+      </h2>
+      <p class="text-center text-lg mb-14 reveal text-body-muted">
+        Empresas e pessoas que precisam de coleta, entrega e prazo cumprido sem surpresa no meio do caminho.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-6">
+        <div class="audience-card reveal">
+          <img
+            src="img/social-distribuidoras.png"
+            alt="Equipe organizando caixas e saídas de mercadorias em uma distribuidora."
+            class="audience-image"
+            loading="lazy"
+          />
+          <div class="audience-copy">
+            <p class="audience-kicker">Operação recorrente</p>
+            <h3 class="card-title text-xl text-heading-dark">Distribuidoras</h3>
+            <p class="text-sm text-body-muted">
+              Coletas e entregas com ritmo de operação, seguro de carga e previsibilidade no custo.
+            </p>
+          </div>
+        </div>
+
+        <div class="audience-card reveal" data-delay="0.1">
+          <img
+            src="img/social-lojistas.png"
+            alt="Separação de pedidos para loja online com sacolas e caixas prontas para envio."
+            class="audience-image"
+            loading="lazy"
+          />
+          <div class="audience-copy">
+            <p class="audience-kicker">Fluxo comercial</p>
+            <h3 class="card-title text-xl text-heading-dark">Lojas e e-commerce</h3>
+            <p class="text-sm text-body-muted">
+              Saída rápida de pedidos, reposição de estoque e entregas que ajudam a manter a reputação da loja.
+            </p>
+          </div>
+        </div>
+
+        <div class="audience-card reveal" data-delay="0.2">
+          <img
+            src="img/social-escritorios.png"
+            alt="Profissional em escritório organizando contratos e malotes para envio urgente."
+            class="audience-image"
+            loading="lazy"
+          />
+          <div class="audience-copy">
+            <p class="audience-kicker">Documentos urgentes</p>
+            <h3 class="card-title text-xl text-heading-dark">Escritórios</h3>
+            <p class="text-sm text-body-muted">
+              Contratos, documentos, assinaturas e malotes com retirada e entrega tratadas com seriedade.
+            </p>
+          </div>
+        </div>
+
+        <div class="audience-card reveal" data-delay="0.3">
+          <img
+            src="img/social-farmacias.png"
+            alt="Balcão de farmácia com itens embalados e prontos para despacho local."
+            class="audience-image"
+            loading="lazy"
+          />
+          <div class="audience-copy">
+            <p class="audience-kicker">Entrega sensível</p>
+            <h3 class="card-title text-xl text-heading-dark">Farmácias e laboratórios</h3>
+            <p class="text-sm text-body-muted">
+              Itens que exigem agilidade, cuidado no manuseio e comunicação clara durante a rota.
+            </p>
+          </div>
+        </div>
+
+        <div class="audience-card reveal" data-delay="0.4">
+          <img
+            src="img/social-pessoas-fisicas.png"
+            alt="Pessoa entregando uma encomenda pequena para o motorista retirar em um prédio residencial."
+            class="audience-image"
+            loading="lazy"
+          />
+          <div class="audience-copy">
+            <p class="audience-kicker">Necessidade pontual</p>
+            <h3 class="card-title text-xl text-heading-dark">Pessoas físicas</h3>
+            <p class="text-sm text-body-muted">
+              Encomendas, urgências e entregas avulsas com o mesmo compromisso dado aos clientes fixos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════════
+       6. TABELA DE PREÇOS
+  ═══════════════════════════════════════════════════════════════════ -->
+  <section class="section-padding bg-white-section">
+    <div class="container-main">
+      <div class="text-center mb-4 reveal">
+        <span class="badge">Tabela de preços</span>
+      </div>
+      <h2 class="section-title text-3xl sm:text-4xl lg:text-5xl text-center mb-4 reveal text-heading-dark">
+        Preço transparente, sem surpresa
+      </h2>
+      <p class="text-center text-lg max-w-xl mx-auto mb-14 reveal text-body-muted">
+        Envie o endereço de coleta, destino e tipo de serviço pelo WhatsApp — passamos o valor na hora.
+      </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 reveal">
+        <!-- Motoboy -->
+        <div class="price-card">
+          <img src="img/illustration-motoboy.png" alt="" class="card-illustration" loading="lazy" aria-hidden="true" />
+          <h3 class="card-title text-xl mb-2 text-heading-dark">Motoboy</h3>
+          <p class="text-sm mb-4 text-body-muted">Documentos, e-commerce e encomendas</p>
+          <p class="text-sm font-semibold mb-6 text-body-blue">Preço por km percorrido</p>
+          <a href="https://wa.me/5511987411445" class="btn-whatsapp btn-whatsapp-compact w-full justify-center text-sm" target="_blank" rel="noopener noreferrer">
+            Solicitar preço
+          </a>
+        </div>
+
+        <!-- Fiorino -->
+        <div class="price-card">
+          <img src="img/illustration-fiorino.png" alt="" class="card-illustration" loading="lazy" aria-hidden="true" />
+          <h3 class="card-title text-xl mb-2 text-heading-dark">Fiorino</h3>
+          <p class="text-sm mb-4 text-body-muted">Cargas pequenas e médias</p>
+          <p class="text-sm font-semibold mb-6 text-body-blue">Preço por km percorrido</p>
+          <a href="https://wa.me/5511987411445" class="btn-whatsapp btn-whatsapp-compact w-full justify-center text-sm" target="_blank" rel="noopener noreferrer">
+            Solicitar preço
+          </a>
+        </div>
+
+        <!-- Van -->
+        <div class="price-card">
+          <img src="img/illustration-van-hr-ducato.png" alt="" class="card-illustration" loading="lazy" aria-hidden="true" />
+          <h3 class="card-title text-xl mb-2 text-heading-dark">Van HR / Ducato</h3>
+          <p class="text-sm mb-4 text-body-muted">Cargas médias e grandes</p>
+          <p class="text-sm font-semibold mb-6 text-body-blue">Preço por km percorrido</p>
+          <a href="https://wa.me/5511987411445" class="btn-whatsapp btn-whatsapp-compact w-full justify-center text-sm" target="_blank" rel="noopener noreferrer">
+            Solicitar preço
+          </a>
+        </div>
+
+        <!-- Iveco/Master -->
+        <div class="price-card">
+          <img src="img/illustration-iveco-master.png" alt="" class="card-illustration" loading="lazy" aria-hidden="true" />
+          <h3 class="card-title text-xl mb-2 text-heading-dark">Iveco / Master</h3>
+          <p class="text-sm mb-4 text-body-muted">Cargas pesadas e volumosas</p>
+          <p class="text-sm font-semibold mb-6 text-body-blue">Preço por km percorrido</p>
+          <a href="https://wa.me/5511987411445" class="btn-whatsapp btn-whatsapp-compact w-full justify-center text-sm" target="_blank" rel="noopener noreferrer">
+            Solicitar preço
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════════
+       7. FAQ
+  ═══════════════════════════════════════════════════════════════════ -->
+  <section class="section-padding bg-off-white-section">
+    <div class="container-narrow">
+      <div class="text-center mb-4 reveal">
+        <span class="badge">Dúvidas frequentes</span>
+      </div>
+      <h2 class="section-title text-3xl sm:text-4xl text-center mb-12 reveal text-heading-dark">
+        Dúvidas frequentes
+      </h2>
+
+      <div class="reveal">
+        <!-- Item 1 -->
+        <div class="accordion-item">
+          <button
+            class="accordion-trigger"
+            aria-expanded="false"
+            aria-controls="faq-1"
+          >
+            Vocês atendem finais de semana e feriados?
+            <span class="accordion-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="accordion-content" id="faq-1" role="region">
+            <p class="accordion-body">
+              Sim. Funcionamos das 08h às 21h todos os dias, incluindo sábados, domingos e feriados.
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="accordion-item">
+          <button
+            class="accordion-trigger"
+            aria-expanded="false"
+            aria-controls="faq-2"
+          >
+            O seguro de carga está incluso em todos os serviços?
+            <span class="accordion-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="accordion-content" id="faq-2" role="region">
+            <p class="accordion-body">
+              Sim. Todas as entregas têm cobertura de seguro — tanto motoboy quanto utilitários. Você não arca com prejuízo em caso de acidente ou extravio.
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="accordion-item">
+          <button
+            class="accordion-trigger"
+            aria-expanded="false"
+            aria-controls="faq-3"
+          >
+            Vocês emitem nota fiscal?
+            <span class="accordion-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="accordion-content" id="faq-3" role="region">
+            <p class="accordion-body">
+              Sim. Somos uma empresa legalizada e regularizada pela Prefeitura de São Paulo. Emitimos nota fiscal para todos os serviços.
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="accordion-item">
+          <button
+            class="accordion-trigger"
+            aria-expanded="false"
+            aria-controls="faq-4"
+          >
+            Qual a área de atendimento?
+            <span class="accordion-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="accordion-content" id="faq-4" role="region">
+            <p class="accordion-body">
+              Atendemos São Paulo com foco na Zona Leste, com raio operacional de até 30km a partir de Vila Formosa.
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="accordion-item">
+          <button
+            class="accordion-trigger"
+            aria-expanded="false"
+            aria-controls="faq-5"
+          >
+            Como faço para pedir uma entrega?
+            <span class="accordion-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="accordion-content" id="faq-5" role="region">
+            <p class="accordion-body">
+              Pelo WhatsApp. Você manda o endereço de coleta, destino e tipo de serviço — a gente passa o valor e confirma na hora. Respondemos das 08h às 21h, todos os dias.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════════
+       8. CTA FINAL
+  ═══════════════════════════════════════════════════════════════════ -->
+  <section class="bg-gradient-hero section-padding">
+    <div class="container-narrow text-center">
+      <div class="reveal mb-4">
+        <span class="badge badge-light">Próximo passo</span>
+      </div>
+      <h2 class="hero-title text-white text-4xl sm:text-5xl lg:text-6xl mb-6 reveal">
+        Chega de entrega que decepciona
+      </h2>
+      <p class="text-lg mb-10 reveal text-gray-light">
+        Fale agora pelo WhatsApp e peça seu orçamento. Respondemos rápido — das 08h às 21h.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center reveal">
+        <a href="https://wa.me/5511987411445" class="btn-whatsapp" target="_blank" rel="noopener noreferrer">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          (11) 98741-1445 — Chamar no WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════════
+       9. FOOTER
+  ═══════════════════════════════════════════════════════════════════ -->
+  <footer class="footer-shell">
+    <div class="container-main">
+      <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-8">
+        <!-- Identidade -->
+        <div>
+          <p class="hero-title text-white text-2xl mb-1">DINIZ EXPRESS</p>
+          <p class="text-sm text-gray-light">
+            Serviço de entregas legalizado pela Prefeitura de São Paulo
+          </p>
+        </div>
+
+        <!-- Contato e endereço -->
+        <div class="sm:text-right text-left">
+          <a
+            href="https://wa.me/5511987411445"
+            class="text-white font-semibold hover:text-whatsapp transition-colors block mb-1 font-body"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            (11) 98741-1445
+          </a>
+          <p class="text-sm text-gray-light">
+            Vila Formosa, Zona Leste de São Paulo
+          </p>
+          <p class="text-sm text-gray-light">
+            Atendimento: 08h às 21h | Todos os dias
+          </p>
+        </div>
+      </div>
+
+      <div class="section-divider section-divider-footer my-8"></div>
+
+      <p class="text-xs text-center text-gray-light">
+        © 2026 Diniz Express. Todos os direitos reservados.
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

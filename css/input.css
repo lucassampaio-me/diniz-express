@@ -1,0 +1,391 @@
+@import "tailwindcss";
+
+/* ─── Design Tokens (DESIGN.md §2, §3, §4) ─────────────────────── */
+@theme {
+  /* Cores primárias */
+  --color-navy:        #0B1E36;
+  --color-blue:        #1565C0;
+  --color-blue-light:  #1E88E5;
+  --color-blue-glow:   #2979FF;
+
+  /* Cores neutras */
+  --color-off-white:   #F5F7FA;
+  --color-gray-light:  #E8ECF0;
+  --color-gray-mid:    #8A9BB0;
+  --color-gray-dark:   #2C3E50;
+
+  /* Acento / urgência */
+  --color-alert:       #D32F2F;
+  --color-whatsapp:    #25D366;
+
+  /* Fontes */
+  --font-display: 'Barlow Condensed', sans-serif;
+  --font-body:    'Barlow', sans-serif;
+
+  /* Border radius */
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   16px;
+  --radius-pill: 100px;
+}
+
+/* ─── Base ──────────────────────────────────────────────────────── */
+@layer base {
+  *, *::before, *::after {
+    @apply box-border;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply font-body text-gray-dark;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a {
+    @apply no-underline;
+  }
+}
+
+/* ─── Components (DESIGN.md §5) ─────────────────────────────────── */
+@layer components {
+
+  /* Layout */
+  .container-main {
+    @apply mx-auto max-w-[1360px] px-6;
+  }
+
+  .container-narrow {
+    @apply mx-auto max-w-[820px] px-6;
+  }
+
+  .section-padding {
+    @apply py-24;
+  }
+
+  /* Fundos */
+  .bg-gradient-hero {
+    background: linear-gradient(160deg, #0B1E36 0%, #0D2B4E 60%, #0F3460 100%);
+  }
+
+  .bg-off-white-section {
+    @apply bg-off-white;
+  }
+
+  .bg-white-section {
+    @apply bg-white;
+  }
+
+  .bg-navy-section {
+    @apply bg-navy;
+  }
+
+  .hero-surface {
+    background-image:
+      linear-gradient(90deg, rgba(11, 30, 54, 0.92) 0%, rgba(11, 30, 54, 0.84) 38%, rgba(11, 30, 54, 0.58) 62%, rgba(11, 30, 54, 0.7) 100%),
+      url('../img/bg-hero.png');
+    background-position: center, 72% center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .hero-logo-frame {
+    @apply mb-16 block w-[160px] sm:w-[200px] lg:w-[220px];
+    filter: drop-shadow(0 12px 30px rgba(0, 0, 0, 0.35));
+  }
+
+  .hero-logo-frame img {
+    @apply block h-auto w-full;
+  }
+
+  .noise-texture {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox=%220 0 256 256%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noise%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.9%22 numOctaves=%224%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noise)%22 opacity=%221%22/%3E%3C/svg%3E");
+  }
+
+  /* Tipografia de display */
+  .hero-title {
+    @apply font-display font-black uppercase tracking-[-0.02em];
+    line-height: 1.05;
+  }
+
+  .section-title {
+    @apply font-display font-extrabold uppercase tracking-[-0.02em];
+    line-height: 1.05;
+  }
+
+  .card-title {
+    @apply font-display font-bold uppercase tracking-[-0.02em];
+    line-height: 1.1;
+  }
+
+  /* Badge / tag */
+  .badge {
+    @apply inline-flex items-center gap-1.5 font-body text-[13px] leading-none font-semibold uppercase tracking-[0.08em] rounded-pill border px-[14px] py-1.5;
+    background: rgba(21, 101, 192, 0.1);
+    border: 1px solid rgba(21, 101, 192, 0.2);
+    color: var(--color-blue-light);
+  }
+
+  .badge-light {
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.9);
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+
+  /* Botão WhatsApp primário */
+  .btn-whatsapp {
+    @apply text-navy bg-whatsapp inline-flex items-center gap-2.5 rounded-pill border-0 px-8 py-[18px] font-display text-lg leading-none font-bold uppercase tracking-[0.04em] cursor-pointer transition;
+    box-shadow: 0 4px 24px rgba(37, 211, 102, 0.35);
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+  }
+
+  .btn-whatsapp:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(37, 211, 102, 0.5);
+  }
+
+  /* Botão outline secundário */
+  .btn-outline {
+    @apply inline-flex items-center gap-2 rounded-pill border-2 border-blue-light bg-transparent px-7 py-[14px] font-display text-base leading-none font-bold uppercase tracking-[0.04em] cursor-pointer transition;
+    background: transparent;
+    color: var(--color-blue-light);
+  }
+
+  .btn-outline:hover {
+    @apply bg-blue-light text-white;
+  }
+
+  /* Cards de serviço */
+  .service-card {
+    @apply rounded-lg border border-gray-light bg-white p-10;
+    transition: border-color 0.2s ease-out, box-shadow 0.2s ease-out, transform 0.2s ease-out;
+  }
+
+  .service-card:hover {
+    border-color: var(--color-blue);
+    box-shadow: 0 8px 32px rgba(21, 101, 192, 0.12);
+    transform: translateY(-4px);
+  }
+
+  /* Card de preço */
+  .price-card {
+    @apply rounded-lg border border-gray-light bg-white px-6 py-8 text-center;
+    transition: border-color 0.2s ease-out, box-shadow 0.2s ease-out, transform 0.2s ease-out;
+  }
+
+  .price-card:hover {
+    border-color: var(--color-blue);
+    box-shadow: 0 8px 32px rgba(21, 101, 192, 0.12);
+    transform: translateY(-4px);
+  }
+
+  .card-illustration {
+    @apply mx-auto mb-4 block h-40 w-40 object-contain;
+  }
+
+  .card-illustration-lg {
+    @apply mx-0 mb-5 h-40 w-40;
+  }
+
+  /* Card de depoimento */
+  .testimonial-card {
+    @apply rounded-lg border border-gray-light bg-white p-8;
+  }
+
+  .audience-card {
+    @apply overflow-hidden rounded-[20px] border border-gray-light bg-white;
+    box-shadow: 0 14px 40px rgba(11, 30, 54, 0.08);
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out, border-color 0.2s ease-out;
+  }
+
+  .audience-card:hover {
+    border-color: rgba(21, 101, 192, 0.22);
+    box-shadow: 0 20px 44px rgba(11, 30, 54, 0.12);
+    transform: translateY(-4px);
+  }
+
+  .audience-image {
+    @apply block h-56 w-full object-cover;
+  }
+
+  .audience-copy {
+    @apply flex flex-col gap-3 p-6;
+  }
+
+  .audience-kicker {
+    @apply font-body text-[12px] font-semibold uppercase tracking-[0.12em] text-blue;
+  }
+
+  /* Accordion FAQ */
+  .accordion-item {
+    @apply border-b border-gray-light;
+  }
+
+  .accordion-trigger {
+    @apply flex w-full items-center justify-between gap-4 bg-transparent py-5 text-left font-body text-base font-semibold text-gray-dark border-0 cursor-pointer;
+  }
+
+  .accordion-trigger:hover {
+    @apply text-blue;
+  }
+
+  .accordion-icon {
+    @apply w-6 shrink-0 text-center text-[22px] font-light text-blue;
+    transition: transform 0.2s ease;
+  }
+
+  .accordion-trigger[aria-expanded="true"] .accordion-icon {
+    transform: rotate(45deg);
+  }
+
+  .accordion-content {
+    @apply max-h-0 overflow-hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .accordion-content.open {
+    @apply max-h-[400px];
+  }
+
+  .accordion-body {
+    @apply pb-5 text-[15px] text-gray-dark;
+    line-height: 1.65;
+  }
+
+  /* Botão WhatsApp fixo */
+  .sticky-whatsapp {
+    @apply fixed right-6 bottom-6 z-[100] flex size-[60px] items-center justify-center rounded-full;
+    background: var(--color-whatsapp);
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    z-index: 100;
+    animation: pulse-wa 2s ease-in-out infinite;
+    transition: transform 0.2s ease-out;
+  }
+
+  .sticky-whatsapp:hover {
+    animation: none;
+    transform: scale(1.1);
+  }
+
+  /* Scroll reveal */
+  .reveal {
+    @apply translate-y-5 opacity-0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+  .reveal.visible {
+    @apply translate-y-0 opacity-100;
+  }
+
+  /* Pain point list item */
+  .pain-item {
+    @apply flex items-start gap-3 border-b border-gray-light py-[14px];
+  }
+
+  .pain-item:last-child {
+    @apply border-b-0;
+  }
+
+  /* Benefit item */
+  .benefit-item {
+    @apply flex items-start gap-5;
+  }
+
+  .benefit-icon {
+    @apply flex size-12 shrink-0 items-center justify-center rounded-md text-blue-light;
+    background: rgba(21, 101, 192, 0.15);
+  }
+
+  /* Divisor de seção */
+  .section-divider {
+    @apply m-0 border-0 border-t border-gray-light;
+  }
+
+  .section-divider-footer {
+    border-color: rgba(255, 255, 255, 0.08);
+  }
+
+  .footer-shell {
+    @apply bg-navy py-12;
+  }
+
+  .text-body-tight {
+    @apply font-body;
+    line-height: 1.6;
+  }
+
+  .text-body-muted {
+    @apply font-body text-gray-dark;
+  }
+
+  .text-body-dark {
+    @apply font-body text-gray-dark;
+  }
+
+  .text-body-blue {
+    @apply font-body text-blue;
+  }
+
+  .text-heading-dark {
+    @apply text-gray-dark;
+  }
+
+  .hero-meta-item {
+    @apply font-body;
+  }
+
+  .detail-meta-item {
+    @apply font-body text-gray-dark;
+  }
+
+  .detail-divider {
+    @apply bg-gray-light;
+  }
+
+  .pain-icon {
+    @apply mt-px shrink-0 text-[18px] font-bold text-alert;
+  }
+
+  .benefit-copy {
+    @apply font-body text-gray-light;
+  }
+
+  .stars-rating {
+    @apply text-[18px] text-amber-500;
+  }
+
+  .testimonial-copy {
+    @apply font-body text-gray-dark;
+    line-height: 1.65;
+  }
+
+  .btn-whatsapp-compact {
+    @apply px-5 py-[14px];
+  }
+}
+
+/* ─── Utilities e animações ─────────────────────────────────────── */
+@layer utilities {
+  @keyframes pulse-wa {
+    0%, 100% { transform: scale(1); box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); }
+    50%       { transform: scale(1.08); box-shadow: 0 6px 28px rgba(37, 211, 102, 0.6); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+
+    .reveal {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
