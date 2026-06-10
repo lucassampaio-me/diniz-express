@@ -58,9 +58,26 @@ function initHeroStagger() {
   });
 }
 
+/* ── Evento de clique no WhatsApp (dataLayer / GTM) ───────────── */
+function initWhatsappTracking() {
+  window.dataLayer = window.dataLayer || [];
+
+  document.addEventListener('click', e => {
+    const link = e.target.closest('a[href*="wa.me"], a[href*="api.whatsapp.com"], a[href*="whatsapp.com/send"]');
+    if (!link) return;
+
+    window.dataLayer.push({
+      event: 'whatsapp_click',
+      link_url: link.href,
+      link_text: (link.textContent || '').trim() || link.getAttribute('aria-label') || ''
+    });
+  });
+}
+
 /* ── Init ─────────────────────────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', () => {
   initAccordion();
   initScrollReveal();
   initHeroStagger();
+  initWhatsappTracking();
 });
